@@ -28,23 +28,13 @@ const client = new MongoClient(uri, {
     const menu = client.db("todos").collection("allTasks");
 
     /*****************************[read]***********************************/
-    /*****[read all menu services]****/
-
-    // app.get("/menu", async (req, res) => {
-    //   const query = {};
-    //   const cursor = menu.find(query);
-    //   const services = await cursor.toArray();
-    //   res.send(services);
-    // });
 
     /*************************************/
-    /*****[read limited menu services]****/
+
     app.get("/", async (req, res) => {
       res.send("hello");
     });
     /*************************************/
-
-    /*****************************[Delete ends]***********************************/
   } finally {
     console.log("done");
   }
